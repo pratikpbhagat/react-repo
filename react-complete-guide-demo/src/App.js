@@ -1,17 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import Person from './Person/Person';
-import { StyleRoot } from 'radium';
-import styled from 'styled-components';
-
-const StyledButton = styled.button`
-  background-color: ${props => props.toggle ? 'red' : 'green'};
-  color: white;
-  font: inherit;
-  border: 1px solid blue;
-  padding: 8px;
-  cursor: pointer;
-`;
+// import { StyleRoot } from 'radium';
+import Persons from './components/Persons/Persons';
+import Cockpit from './components/Cockpit/Cockpit';
 
 export default function App() {
 
@@ -68,38 +59,19 @@ export default function App() {
   let persons = null;
   if (personState.showPersons) {
     persons = (
-      <div>
-        {
-          personState.persons.map((person, index) => {
-            return <Person
-              key={person.id}
-              name={person.name}
-              age={person.age}
-              click={() => deletePersonHandler(index)}
-              changed={(event) => nameChangeHandler(event, index)} />
-          })
-        }
-      </div>
+      <Persons persons={personState.persons}
+        clicked={deletePersonHandler}
+        changed={nameChangeHandler} />
     );
     // style.backgroundColor = 'red';
   }
 
-  const classes = [];
-  if (personState.persons.length <= 3) {
-    classes.push('red');
-  }
-  if (personState.persons.length <= 1) {
-    classes.push('bold');
-  }
-
   return (
-    <StyleRoot>
-      <div className="App">
-        <h1>Hi, I'am a React App</h1>
-        <p className={classes.join(' ')}>This is really working</p>
-        <StyledButton onClick={togglePersonHandler} toggle={personState.showPersons}>Toggle Persons</StyledButton>
-        {persons}
-      </div>
-    </StyleRoot>
+    <div className="App">
+      <Cockpit showPersons={personState.showPersons}
+        persons={personState.persons}
+        toggle={togglePersonHandler} />
+      {persons}
+    </div>
   );
 }
