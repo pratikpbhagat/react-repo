@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Main from '../Main/Main';
 
 const StyledButton = styled.button`
   background-color: ${props => props.toggle ? 'red' : 'green'};
@@ -25,7 +26,8 @@ const cockpit = (props) => {
         <div>
             <h1>Hi, I'am a React App</h1>
             <p className={assignedClasses.join(' ')}>This is really working</p>
-            <StyledButton onClick={props.toggle}>Toggle Persons</StyledButton>
+            <StyledButton onClick={props.toggle} toggle={props.showPersons} >Toggle Persons</StyledButton>
+            <Main color={props.showPersons}/>
         </div>
     );
 }
