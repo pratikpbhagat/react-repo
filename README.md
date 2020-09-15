@@ -10,6 +10,8 @@ npm install create-react-app -g
 
 create-react-app react-complete-guide --script-version 1.1.5
 
+create-react-app burger-builder-app --script-version 1.1.5
+
 3. Install radium
 
 npm install --save radium
