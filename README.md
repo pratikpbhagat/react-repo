@@ -17,3 +17,7 @@ npm install --save radium
 4. Install Styled Components
 
 npm install --save styled-components
+
+5. For CSS Modules
+
+npm run eject

@@ -3,6 +3,7 @@ import './App.css';
 // import { StyleRoot } from 'radium';
 import Persons from './components/Persons/Persons';
 import Cockpit from './components/Cockpit/Cockpit';
+import classes from './components/Persons/Person/Person.css'
 
 export default function App() {
 
@@ -67,7 +68,7 @@ export default function App() {
   }
 
   return (
-    <div className="App">
+    <div className={classes.Person}>
       <Cockpit showPersons={personState.showPersons}
         persons={personState.persons}
         toggle={togglePersonHandler} />
