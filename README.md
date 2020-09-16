@@ -20,6 +20,6 @@ npm install --save radium
 
 npm install --save styled-components
 
-5. For CSS Modules
+5. For CSS Modules - Not needed for React scripts 2.0 onwards -> rename Css files to XXXX.module.css instead
 
 npm run eject
