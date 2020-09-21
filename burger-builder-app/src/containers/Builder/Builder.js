@@ -28,8 +28,22 @@ class Builder extends Component {
         axios.get('/ingredients.json')
             .then(response => {
                 this.setState({ ingredients: response.data });
-                this.updatePurchaseState(response.data);
+                this.getInitialPrice(response.data);
             });
+    }
+
+    getInitialPrice(ingredients) {
+        const sum = Object.keys(ingredients)
+            .map(igKey => {
+                return ingredients[igKey]
+            })
+            .reduce((sum, el) => {
+                return sum + el;
+            }, 0);
+        const oldPrice = this.state.totalPrice;
+        console.log(oldPrice);
+        const newPrice = oldPrice + sum;
+        this.setState({ purchasable: sum > 0, totalPrice: newPrice });
     }
 
     updatePurchaseState(ingredients) {
