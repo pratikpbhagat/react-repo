@@ -4,7 +4,7 @@ import Backdrop from '../../ui/Backdrop/Backdrop';
 
 const sideDrawer = (props) => (
     <div>
-        <Backdrop show={props.open} clicked={props.closed} />
+        <Backdrop />
         <nav>
             <NavigationItems />
         </nav>

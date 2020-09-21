@@ -5,7 +5,7 @@ class Content extends Component {
     render() {
         return (
             <div>
-                Main Content comes over
+                <p>COVID Support</p>
                 <SearchProperty />
             </div>
         );

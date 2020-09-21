@@ -26,6 +26,14 @@ npm install --save styled-components
 
 npm run eject
 
-6. Install axios for http calls
+6. Install axios for http calls - Needed
 	
 npm install --save axios
+
+7. Install routing - Needed
+
+npm install --save react-router-dom
+
+8. Higher Order Components
+
+npm install --save react-aux
