@@ -1,0 +1,14 @@
+.NavItem {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    /* display: none; */
+}
+
+.NavItemClosed {
+    display: none;
+    
+}
+.NavItemOpen {
+    display: block;
+}

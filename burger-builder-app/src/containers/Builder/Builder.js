@@ -35,13 +35,12 @@ class Builder extends Component {
     getInitialPrice(ingredients) {
         const sum = Object.keys(ingredients)
             .map(igKey => {
-                return ingredients[igKey]
+                return (ingredients[igKey] * INGREDIENT_PRICES[igKey])
             })
             .reduce((sum, el) => {
                 return sum + el;
             }, 0);
         const oldPrice = this.state.totalPrice;
-        console.log(oldPrice);
         const newPrice = oldPrice + sum;
         this.setState({ purchasable: sum > 0, totalPrice: newPrice });
     }

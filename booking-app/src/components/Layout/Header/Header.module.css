@@ -1,21 +1,76 @@
 .Header {
-    background-color: #0000CD;
-    height: 56px;
-    width: 100%;
-    /*position: fixed;*/
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
+    font-family: sans-serif;
     box-sizing: border-box;
-    z-index: 90;
-    color: white;
+    padding: 0;
+    margin: 0;
 }
 
-@media(min-width: 500px){
-    .Header{
-        background-color: #cd0090;
-    }
+.Header nav{
+    background: #222;
+    padding: 5px 20px;
+}
+
+.Header ul {
+    list-style-type: none;
+}
+
+.Header a {
+    color: white;
+    text-decoration: none;
+}
+
+.Header a:hover {
+    text-decoration: underline;
+}
+
+.Menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+
+.Bars {
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.Bars:before,
+.Bars:after {
+    background: #999;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.Bars:before {
+    top: 5px;
+}
+.Bars:after {
+    top: -5px;
+}
+
+.Menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Toggle {
+    order: 2;
+}
+
+.Button {
+    order: 1;
+}
+
+/* Navbar Toggle */
+.Toggle {
+    cursor:pointer;
 }

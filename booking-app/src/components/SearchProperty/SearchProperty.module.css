@@ -1,3 +1,36 @@
 .SearchProperty {
-    
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.SearchProperty h2, p{
+    text-align: left;
+    font-size: medium;
+}
+
+.SearchProperty input{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    vertical-align: center;
+    border-color: orange;
+    border-width: 3px;
+}
+
+.SearchProperty button{
+    height: 40px;
+    width: 100%;
+    background-color:dodgerblue;
+    color: white;
+    font-size: medium;
+}
+
+.SPFooter {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
 }
