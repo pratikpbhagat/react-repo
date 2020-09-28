@@ -11,7 +11,8 @@ const menuItems = (props) => {
         { link: '/book-airport-taxi', label: 'Book Airport Taxi' },
         { link: '/wishlist', label: 'Wishlist' },
         { link: '/travel-communities', label: 'Travel Communities' },
-        { link: '/travel-articles', label: 'Travel Articles' }
+        { link: '/travel-articles', label: 'Travel Articles' },
+        { link: '/your-contributions', label: 'Your Contributions' }
     ];
     return (
         <Aux>

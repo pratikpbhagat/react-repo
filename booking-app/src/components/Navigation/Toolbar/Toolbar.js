@@ -1,20 +1,10 @@
-import React, { Component } from 'react';
-import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle';
-import Aux from 'react-aux';
+import React from 'react';
+import classes from './Toolbar.module.css';
 
-class Toolbar extends Component {
+const toolbar = (props) => (
+    <li className={classes.Toggle}>
+        <span className={classes.Bars} onClick={props.toggle}></span>
+    </li>
+);
 
-    drawerToggleClicked() {
-        console.log('Drawer Toggle Clicked');
-    }
-
-    render() {
-        return (
-            <Aux>
-                <DrawerToggle clicked={this.drawerToggleClicked} />
-            </Aux>
-        );
-    }
-}
-
-export default Toolbar;
+export default toolbar;

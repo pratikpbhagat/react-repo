@@ -3,10 +3,7 @@ import Aux from 'react-aux';
 import classes from './Header.module.css';
 import MenuItems from './MenuItems';
 import { Link } from 'react-router-dom';
-// import Messages from './Messages/Messages';
-// import Notifications from './Notifications/Notifications';
-// import Toolbar from '../../Navigation/Toolbar/Toolbar';
-// import AppLogo from '../../Logo/AppLogo/AppLogo';
+import Toolbar from '../../Navigation/Toolbar/Toolbar';
 
 class Header extends Component {
 
@@ -27,24 +24,18 @@ class Header extends Component {
                     <nav>
                         <ul className={classes.Menu}>
                             <li className={classes.Logo}>
-                                <Link to="/" onClick={this.sideDrawerToggleHandler}>Booking.com</Link>
+                                <Link to="/" onClick={this.state.showSideDrawer ? this.sideDrawerToggleHandler : null}>Booking.com</Link>
                             </li>
-                            <MenuItems open={this.state.showSideDrawer} toggle={this.sideDrawerToggleHandler}/>
+                            <MenuItems open={this.state.showSideDrawer} toggle={this.sideDrawerToggleHandler} />
                             <li className={classes.Button}>
                                 <Link to="/login">Login</Link>
                             </li>
                             <li className={classes.Button}>
                                 <Link to="/sign-up">Sign Up</Link>
                             </li>
-                            <li className={classes.Toggle}>
-                                <span className={classes.Bars} onClick={this.sideDrawerToggleHandler}></span>
-                            </li>
+                            <Toolbar toggle={this.sideDrawerToggleHandler}/>
                         </ul>
                     </nav>
-                    {/* <Toolbar />
-        <AppLogo />
-        <Messages />
-        <Notifications /> */}
                 </div>
             </Aux>
         );

@@ -10,8 +10,13 @@
     padding: 0px 20px;
 }
 
+.HeaderLine {
+    border-bottom: 2px solid red;
+}
+
 .Header ul {
     list-style-type: none;
+    padding: 0px;
 }
 
 .Header a {
@@ -29,32 +34,6 @@
     white-space: nowrap;
 }
 
-.Bars {
-    background: #999;
-    display: inline-block;
-    height: 2px;
-    position: relative;
-    transition: background .2s ease-out;
-    width: 18px;
-}
-
-.Bars:before,
-.Bars:after {
-    background: #999;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-.Bars:before {
-    top: 5px;
-}
-.Bars:after {
-    top: -5px;
-}
-
 .Menu {
     display: flex;
     flex-wrap: wrap;
@@ -62,23 +41,11 @@
     align-items: center;
 }
 
-.Toggle {
-    order: 2;
-}
-
 .Button {
     order: 1;
 }
 
-/* Navbar Toggle */
-.Toggle {
-    cursor:pointer;
-}
-
 @media all and (min-width: 468px) {
-    .Toggle {
-        display: none;
-    }
     .Menu {
         justify-content: center;
     }
