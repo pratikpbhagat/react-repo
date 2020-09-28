@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './MenuItems.module.css';
 import Aux from 'react-aux';
+import { Link } from 'react-router-dom';
 
 const menuItems = (props) => {
     let attachedClasses = [classes.NavItem, classes.NavItemClosed];
@@ -11,13 +12,28 @@ const menuItems = (props) => {
     return (
         <Aux>
             <li className={attachedClasses.join(' ')}>
-                <a href="#">Home</a>
+                <Link to="/bookings">Bookings</Link>
             </li>
             <li className={attachedClasses.join(' ')}>
-                <a href="#">About</a>
+                <Link to="/contact-cs">Contact Customer Service</Link>
             </li>
             <li className={attachedClasses.join(' ')}>
-                <a href="#">Services</a>
+                <Link to="/car-rentals">Car Rentals</Link>
+            </li>
+            <li className={attachedClasses.join(' ')}>
+                <Link to="/deals">Deals</Link>
+            </li>
+            <li className={attachedClasses.join(' ')}>
+                <Link to="/book-airport-taxi">Book Airport Taxi</Link>
+            </li>
+            <li className={attachedClasses.join(' ')}>
+                <Link to="/wishlist">Wishlist</Link>
+            </li>
+            <li className={attachedClasses.join(' ')}>
+                <Link to="/travel-communities">Travel Communities</Link>
+            </li>
+            <li className={attachedClasses.join(' ')}>
+                <Link to="/travel-articles">Travel Articles</Link>
             </li>
         </Aux>
     );

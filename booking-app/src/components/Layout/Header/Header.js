@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Aux from 'react-aux';
 import classes from './Header.module.css';
 import MenuItems from './MenuItems';
+import { Link } from 'react-router-dom';
 // import Messages from './Messages/Messages';
 // import Notifications from './Notifications/Notifications';
 // import Toolbar from '../../Navigation/Toolbar/Toolbar';
@@ -26,14 +27,14 @@ class Header extends Component {
                     <nav>
                         <ul className={classes.Menu}>
                             <li className={classes.Logo}>
-                                <a href="#">App Logo</a>
+                                <Link to="/">Booking.com</Link>
                             </li>
                             <MenuItems open={this.state.showSideDrawer} />
                             <li className={classes.Button}>
-                                <a href="#">Login</a>
+                                <Link to="/login">Login</Link>
                             </li>
                             <li className={classes.Button}>
-                                <a href="#">Sign Up</a>
+                                <Link to="/sign-up">Sign Up</Link>
                             </li>
                             <li className={classes.Toggle}>
                                 <span className={classes.Bars} onClick={this.sideDrawerToggleHandler}></span>

@@ -8,15 +8,23 @@ const searchProperty = (props) => (
             <h2>Hi, Pratik</h2>
             <p>Search destination/property name</p>
             <div>
-                <input type="text" />
-                <input type="text" />
-                <input type="text" />
-                <button>Search</button>
+                <ul>
+                    <li className={classes.WhereInput}><input type="text" /></li>
+                    <li className={classes.DateInput}><input type="text" /></li>
+                    <li className={classes.RoomInput}><input type="text" /></li>
+                    <li><button>Search</button></li>
+                </ul>
             </div>
         </div>
         <div className={classes.SPFooter}>
-            <label>I'm travelling for work</label>
-            <input type="checkbox" value="test" />
+            <ul>
+                <li>
+                    <label>I'm travelling for work</label>
+                </li>
+                <li>
+                    <input type="checkbox" value="test" />
+                </li>
+            </ul>
         </div>
     </Aux>
 );

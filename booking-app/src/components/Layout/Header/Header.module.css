@@ -1,5 +1,5 @@
 .Header {
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -7,7 +7,7 @@
 
 .Header nav{
     background: #222;
-    padding: 5px 20px;
+    padding: 0px 20px;
 }
 
 .Header ul {
@@ -73,4 +73,23 @@
 /* Navbar Toggle */
 .Toggle {
     cursor:pointer;
+}
+
+@media all and (min-width: 468px) {
+    .Toggle {
+        display: none;
+    }
+    .Menu {
+        justify-content: center;
+    }
+    .Logo {
+        order: 1;
+    }
+    .Button {
+        order: 3;
+    }
+}
+
+@media all and (min-width: 768px) {
+
 }

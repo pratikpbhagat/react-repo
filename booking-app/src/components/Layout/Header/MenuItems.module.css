@@ -12,3 +12,11 @@
 .NavItemOpen {
     display: block;
 }
+
+@media all and (min-width: 468px) {
+    .NavItem {
+        display: block;
+        width: auto;
+        text-align: center;
+    }
+}
