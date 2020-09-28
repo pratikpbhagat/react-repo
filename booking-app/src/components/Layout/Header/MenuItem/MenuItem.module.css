@@ -1,0 +1,22 @@
+.NavItem {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    /* display: none; */
+}
+
+.NavItemClosed {
+    display: none;
+    
+}
+.NavItemOpen {
+    display: block;
+}
+
+@media all and (min-width: 468px) {
+    .NavItem {
+        display: block;
+        width: auto;
+        text-align: center;
+    }
+}

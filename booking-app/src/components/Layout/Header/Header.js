@@ -27,9 +27,9 @@ class Header extends Component {
                     <nav>
                         <ul className={classes.Menu}>
                             <li className={classes.Logo}>
-                                <Link to="/">Booking.com</Link>
+                                <Link to="/" onClick={this.sideDrawerToggleHandler}>Booking.com</Link>
                             </li>
-                            <MenuItems open={this.state.showSideDrawer} />
+                            <MenuItems open={this.state.showSideDrawer} toggle={this.sideDrawerToggleHandler}/>
                             <li className={classes.Button}>
                                 <Link to="/login">Login</Link>
                             </li>
