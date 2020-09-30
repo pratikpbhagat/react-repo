@@ -1,4 +1,5 @@
 import React from 'react';
+import Aux from 'react-aux';
 
 const inputComponent = (props) => {
 
@@ -10,6 +11,20 @@ const inputComponent = (props) => {
             break;
         case ('textarea'):
             inputComponent = <textarea {...props.elementConfig} />;
+            break;
+        case ('multi-choice'):
+            inputComponent = (
+                <Aux>
+                    {
+                        props.elementConfig.options.map(option => (
+                            <div key={option.value}>
+                                <input {...props.elementConfig} />
+                                <label>{option.displayValue}</label>
+                            </div>
+                        ))
+                    }
+                </Aux>
+            );
             break;
         case ('select'):
             inputComponent = (

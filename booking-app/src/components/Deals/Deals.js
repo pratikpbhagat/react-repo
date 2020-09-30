@@ -8,8 +8,44 @@ class Deals extends Component {
             name: {
                 elementType: 'input',
                 elementConfig: {
+                    type: 'text',
                     placeholder: 'Name',
                     label: 'Name'
+                }
+            },
+            password: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'password',
+                    placeholder: 'Password',
+                    label: 'Password'
+                }
+            },
+            gender: {
+                elementType: 'multi-choice',
+                elementConfig: {
+                    type: 'radio',
+                    name: 'gender',
+                    options: [
+                        { value: 'M', displayValue: 'Male' },
+                        { value: 'F', displayValue: 'Female' }
+                    ],
+                    label: 'Select Gender'
+                }
+            },
+            interests: {
+                elementType: 'multi-choice',
+                elementConfig: {
+                    type: 'checkbox',
+                    name: 'gender',
+                    options: [
+                        { value: 'A', displayValue: 'First Interest' },
+                        { value: 'B', displayValue: 'Second Interest' },
+                        { value: 'C', displayValue: 'Third Interest' },
+                        { value: 'D', displayValue: 'Fourth Interest' },
+                        { value: 'E', displayValue: 'Fifth Interest' },
+                    ],
+                    label: 'Select Interests'
                 }
             },
             address: {
