@@ -5,9 +5,4 @@
 .Profile ul {
     list-style: none;
 }
-
-.Profile:hover ~ .ProfileMenu {
-    display: block;
-    border-bottom: 3px solid red;
-}
   
