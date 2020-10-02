@@ -1,0 +1,20 @@
+.Search {
+    display: flex;
+    align-items: center;
+    border:#A9A9A9;
+    border-width: thin;
+    border-style: solid;
+    height: 50px;
+    padding: 0px 10px;
+}
+
+.Search input{
+    width: 500px;
+    height: 30px;
+    border: 0px;
+    font-size: 16px;
+}
+
+.Search input:focus, input:focus{
+    outline: none;
+}

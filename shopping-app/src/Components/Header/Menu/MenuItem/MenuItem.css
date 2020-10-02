@@ -1,0 +1,10 @@
+.MenuItem {
+    padding: 0px 25px;
+}
+
+.MenuItem a{
+    list-style: none;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+}

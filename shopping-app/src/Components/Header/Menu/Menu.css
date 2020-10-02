@@ -1,0 +1,12 @@
+.Menu {
+    display: flex;
+}
+
+.Menu li {
+    list-style: none;
+}
+
+.Menu li:hover{
+    border-bottom: 3px solid red;
+    cursor: pointer;
+}

@@ -43,7 +43,7 @@ class Deals extends Component {
                         { value: 'B', displayValue: 'Second Interest' },
                         { value: 'C', displayValue: 'Third Interest' },
                         { value: 'D', displayValue: 'Fourth Interest' },
-                        { value: 'E', displayValue: 'Fifth Interest' },
+                        { value: 'E', displayValue: 'Fifth Interest' }
                     ],
                     label: 'Select Interests'
                 }

@@ -1,0 +1,27 @@
+.Header {
+    display: flex;
+    border-bottom: 1px solid;
+    box-shadow: 2px 5px #D3D3D3;
+    padding-top: 10px;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.Header__menu {
+    display: flex;
+    justify-content: center;
+}
+
+.Header__left{
+    padding-right: 200px;
+}
+
+.Header__middle{
+    padding-right: 50px;
+    align-items: center;
+    padding-top: 05px;
+}
+
+.Header__right{
+    
+}

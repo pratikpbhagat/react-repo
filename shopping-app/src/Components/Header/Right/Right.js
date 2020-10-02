@@ -1,0 +1,17 @@
+import React from 'react';
+import Profile from '../../Profile/Profile';
+import Wishlist from '../../Wishlist/Wishlist';
+import Bag from '../../Bag/Bag';
+import './Right.css';
+
+const right = (props) => (
+    <div className="Right">
+        <ul className="Right__menu">
+            <li><Profile /></li>
+            <li><Wishlist /></li>
+            <li><Bag /></li>
+        </ul>
+    </div>
+);
+
+export default right;

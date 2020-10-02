@@ -13,6 +13,8 @@ Commands to install
 	create-react-app burger-builder-app --script-version 1.1.5
 
 	create-react-app booking-app
+	
+	create-react-app shopping-app
 
 3. Install radium
 
@@ -45,3 +47,9 @@ Commands to install
 10. Connect react to redux
 
 	npm install --save react-redux
+	
+11. Material UI
+	
+	npm install @material-ui/core
+	
+	npm install @material-ui/icons
