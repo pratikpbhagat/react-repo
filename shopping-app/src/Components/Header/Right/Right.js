@@ -8,7 +8,7 @@ const right = (props) => (
     <div>
         <div className="Right">
             <ul className="Right__menu">
-                <li className="Profile__button"><Profile /></li>
+                <li><Profile /></li>
                 <li><Wishlist /></li>
                 <li><Bag /></li>
             </ul>
