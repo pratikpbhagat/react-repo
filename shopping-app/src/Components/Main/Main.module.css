@@ -20,9 +20,12 @@
     margin-right: 10px;
     z-index: 1;
     background-color: white;
-    display: block;
     height: 350px;
     width: 300px;
+}
+
+.Profile__menuclosed {
+    display: none;
 }
 
 .Profile__menu ul {
