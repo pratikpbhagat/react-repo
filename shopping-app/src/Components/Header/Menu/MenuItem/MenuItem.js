@@ -9,9 +9,13 @@ const menuItem = (props) => (
     </li>
 );
 
-const mapDispatchToProps = dispatch => {
+// https://react-redux.js.org/api/connect#mergeprops-stateprops-dispatchprops-ownprops-object
+const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onMenuOver: () => dispatch({ type: actionTypes.MAIN_MENU_MOUSE_OVER })
+        onMenuOver: () => dispatch({
+            type: actionTypes.MAIN_MENU_MOUSE_OVER,
+            link: ownProps.link
+        })
     }
 }
 

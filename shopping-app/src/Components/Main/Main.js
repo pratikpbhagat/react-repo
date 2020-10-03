@@ -15,11 +15,29 @@ const main = (props) => {
         mainMenuClasses = [classes.Main__menu];
     }
 
+    let menuItem = null;
+
+    if (props.menuItem === '/men') {
+        menuItem = <p>Mens items will be displayed here</p>;
+    }
+    if (props.menuItem === '/wommen') {
+        menuItem = <p>Womens items will be displayed here</p>;
+    }
+    if (props.menuItem === '/kids') {
+        menuItem = <p>Kids items will be displayed here</p>;
+    }
+    if (props.menuItem === '/home-living') {
+        menuItem = <p>Home Living items will be displayed here</p>;
+    }
+    if (props.menuItem === '/offers') {
+        menuItem = <p>Offers will be displayed here</p>;
+    }
+
     return (
         <div className={classes.Main}>
             <div className={mainMenuClasses.join(' ')} onMouseLeave={props.onMenuOut}>
-                Other menu items come over here
-                </div>
+                {menuItem}
+            </div>
             <div className={profileMenuClasses.join(' ')}>
                 <ProfileMenu />
             </div>
@@ -33,7 +51,8 @@ const main = (props) => {
 const mapStateToProps = state => {
     return {
         profileShow: state.profile.profileShow,
-        showMenu: state.menu.showMenu
+        showMenu: state.menu.showMenu,
+        menuItem: state.menu.menuItem
     };
 };
 
