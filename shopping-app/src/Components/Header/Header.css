@@ -9,7 +9,7 @@
 
 .Header__menu {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .Header__left{
@@ -18,10 +18,11 @@
 
 .Header__middle{
     padding-right: 50px;
-    align-items: center;
+    /* align-items: center; */
     padding-top: 05px;
 }
 
 .Header__right{
-    
+    border: 1px solid red;
+    /* padding: 0px 0px 0px 0px; */
 }

@@ -1,3 +1,12 @@
+.Wishlist {
+    /* border: 1px solid; */
+    cursor: pointer;
+}
 .Wishlist ul {
     list-style: none;
+    font-size: 0;
+}
+
+.Wishlist li {
+    font-size: 14px;
 }

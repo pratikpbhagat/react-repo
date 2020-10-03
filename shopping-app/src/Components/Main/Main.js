@@ -2,18 +2,25 @@ import React from 'react';
 import classes from './Main.module.css';
 import ProfileMenu from '../Profile/ProfileMenu/ProfileMenu';
 import { connect } from 'react-redux';
+import * as actionTypes from '../../store/actions/actions';
 
 const main = (props) => {
-    let assignedClasses = [classes.Profile__menu, classes.Profile__menuclosed];
+    let profileMenuClasses = [classes.Profile__menu, classes.Profile__menuClosed];
     if (props.profileShow) {
-        assignedClasses = [classes.Profile__menu];
+        profileMenuClasses = [classes.Profile__menu];
     }
+
+    let mainMenuClasses = [classes.Main__menu, classes.Main__menuClosed];
+    if (props.showMenu) {
+        mainMenuClasses = [classes.Main__menu];
+    }
+
     return (
         <div className={classes.Main}>
-            <div className={classes.Main__menu}>
+            <div className={mainMenuClasses.join(' ')} onMouseLeave={props.onMenuOut}>
                 Other menu items come over here
                 </div>
-            <div className={assignedClasses.join(' ')}>
+            <div className={profileMenuClasses.join(' ')}>
                 <ProfileMenu />
             </div>
             <div className={classes.Main__content}>
@@ -24,7 +31,16 @@ const main = (props) => {
 }
 
 const mapStateToProps = state => {
-    return { profileShow: state.profileShow };
+    return {
+        profileShow: state.profile.profileShow,
+        showMenu: state.menu.showMenu
+    };
 };
 
-export default connect(mapStateToProps, null)(main);
+const mapDispatchToProps = dispatch => {
+    return {
+        onMenuOut: () => dispatch({ type: actionTypes.MAIN_MENU_MOUSE_OUT })
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(main);

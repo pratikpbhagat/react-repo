@@ -2,28 +2,28 @@ import { Avatar } from '@material-ui/core';
 import React from 'react';
 import './Profile.css';
 import { connect } from 'react-redux';
+import * as actionTypes from '../../store/actions/actions';
 
 const profile = (props) => {
     return (
-        <div>
-            <div className="Profile" onMouseEnter={props.onProfileOver} onMouseLeave={props.onProfileOut}>
-                <ul>
-                    <li><Avatar>PB</Avatar></li>
-                    <li>Profile</li>
-                </ul>
-            </div>
+        <div className="Profile"
+            onMouseEnter={props.onProfileOver}>
+            <ul>
+                <li><Avatar>PB</Avatar></li>
+                <li>Profile</li>
+            </ul>
         </div>
     );
 };
 
 const mapStateToProps = state => {
-    return { profileShow: state.profileShow };
+    return { profileShow: state.profile.profileShow };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        onProfileOver: () => dispatch({ type: 'MOUSE_ENTER' }),
-        onProfileOut: () => dispatch({ type: 'MOUSE_OUT' })
+        onProfileOver: () => dispatch({ type: actionTypes.PROFILE_MOUSE_OVER }),
+        onProfileOut: () => dispatch({ type: actionTypes.PROFILE_MOUSE_OUT })
     }
 };
 

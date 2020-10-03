@@ -1,3 +1,4 @@
+import * as actionTypes from '../actions/actions';
 
 const initialState = {
     profileShow: false
@@ -5,20 +6,20 @@ const initialState = {
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ('MOUSE_ENTER'):
+        case (actionTypes.PROFILE_MOUSE_OVER):
+            console.log(action.type);
             return {
                 ...state, profileShow: true
             }
-        case ('MOUSE_OUT'):
+        case (actionTypes.PROFILE_MOUSE_OUT):
+            console.log(action.type);
             return {
                 ...state, profileShow: false
             }
         default:
-            return {
-                ...state, profileShow: false
-            }
+            console.log('No action required');
     }
-    // return state;
+    return state;
 };
 
 export default profileReducer;

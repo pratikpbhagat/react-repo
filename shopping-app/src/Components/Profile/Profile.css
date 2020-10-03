@@ -1,8 +1,14 @@
 .Profile {
-    cursor: pointer;
+    /* cursor: pointer; */
+    /* border: 1px solid; */
 }
 
 .Profile ul {
+    font-size: 0;
     list-style: none;
+}
+
+.Profile li {
+    font-size: 14px;
 }
   

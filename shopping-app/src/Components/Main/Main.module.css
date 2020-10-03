@@ -14,6 +14,10 @@
     width: 1400px;
 }
 
+.Main__menuClosed {
+    display: none;
+}
+
 .Profile__menu {
     /* border: 1px solid; */
     /* padding: 0px 180px 0px 0px; */
@@ -24,7 +28,7 @@
     width: 300px;
 }
 
-.Profile__menuclosed {
+.Profile__menuClosed {
     display: none;
 }
 

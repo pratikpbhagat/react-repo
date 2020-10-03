@@ -1,5 +1,7 @@
 .Logo {
-    padding-left: 50px;
     padding-top: 10px;
+    /* padding-bottom: 15px; */
+    padding-left: 50px;
     /* border: 1px solid; */
+    height: 45px;
 }

@@ -15,9 +15,9 @@ const header = (props) => (
             <div className="Header__middle">
                 <Search />
             </div>
-            <div className="Header__right">
-                <Right />
-            </div>
+            {/* <div className="Header__right"> */}
+            <Right />
+            {/* </div> */}
         </header>
     </div>
 );

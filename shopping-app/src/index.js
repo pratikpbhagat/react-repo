@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import profileReducer from './store/reducers/ProfileReducer';
+import mainMenuReducer from './store/reducers/MainMenuReducer';
 import { Provider } from 'react-redux';
 
-const store = createStore(profileReducer);
+const rootReducers = combineReducers({
+  profile: profileReducer,
+  menu: mainMenuReducer
+});
+
+const store = createStore(rootReducers);
 
 ReactDOM.render(
   <React.StrictMode>
