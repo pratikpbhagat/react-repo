@@ -10,8 +10,8 @@
     z-index: 1;
     margin-left: 200px;
     background-color: white;
-    height: 400px;
-    width: 700px;
+    height: 500px;
+    width: 1400px;
 }
 
 .Profile__menu {
@@ -21,7 +21,7 @@
     z-index: 1;
     background-color: white;
     display: block;
-    height: 150px;
+    height: 350px;
     width: 300px;
 }
 
