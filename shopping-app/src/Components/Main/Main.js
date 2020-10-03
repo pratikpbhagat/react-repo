@@ -8,16 +8,15 @@ const main = (props) => {
     if (props.profileShow) {
         assignedClasses = [classes.Profile__menu];
     }
-    console.log(assignedClasses);
     return (
-        <div className="Main">
-            <div className="Main__menu">
+        <div className={classes.Main}>
+            <div className={classes.Main__menu}>
                 Other menu items come over here
                 </div>
             <div className={assignedClasses.join(' ')}>
                 <ProfileMenu />
             </div>
-            <div className="Main__content">
+            <div className={classes.Main__content}>
                 The main content of the page lies over here and you can visit any of the pages from here
                 </div>
         </div>
