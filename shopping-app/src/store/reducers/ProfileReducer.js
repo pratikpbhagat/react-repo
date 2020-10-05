@@ -1,10 +1,12 @@
 import * as actionTypes from '../actions/actions';
+// import { updateObject } from '../Utility';
 
 const initialState = {
     profileShow: false
 }
 
 const profileReducer = (state = initialState, action) => {
+    console.log('action.type - ' + action.type);
     switch (action.type) {
         case (actionTypes.PROFILE_MOUSE_OVER):
             return {
@@ -15,9 +17,8 @@ const profileReducer = (state = initialState, action) => {
                 ...state, profileShow: false
             }
         default:
-            console.log('No action required');
+            return state;
     }
-    return state;
 };
 
 export default profileReducer;

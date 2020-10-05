@@ -1,7 +1,8 @@
 import React from 'react';
 import './ProfileMenu.css';
 import { connect } from 'react-redux';
-import * as actionTypes from '../../../store/actions/actions';
+// import * as actionTypes from '../../../store/actions/actions';
+import {profileMouseOut} from '../../../store/actions/ProfileActions';
 
 const profileMenu = (props) => (
     <div className="ProfileMenu"
@@ -20,7 +21,8 @@ const profileMenu = (props) => (
 const mapDispatchToProps = dispatch => {
     return {
         // onProfileOver: () => dispatch({ type: 'MOUSE_ENTER' }),
-        onProfileOut: () => dispatch({ type: actionTypes.PROFILE_MOUSE_OUT })
+        // onProfileOut: () => dispatch({ type: actionTypes.PROFILE_MOUSE_OUT })
+        onProfileOut: () => dispatch(profileMouseOut())
     }
 };
 

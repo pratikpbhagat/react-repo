@@ -36,9 +36,8 @@ const mainMenuReducer = (state = initialState, action) => {
                 ...state, showMenu: false
             }
         default:
-            console.log('No action required');
+            return state;
     }
-    return state;
 };
 
 export default mainMenuReducer;

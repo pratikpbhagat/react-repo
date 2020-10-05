@@ -2,7 +2,8 @@ import { Avatar } from '@material-ui/core';
 import React from 'react';
 import './Profile.css';
 import { connect } from 'react-redux';
-import * as actionTypes from '../../store/actions/actions';
+// import * as actionTypes from '../../store/actions/actions';
+import { profileMouseOver, profileMouseOut } from '../../store/actions/ProfileActions';
 
 const profile = (props) => {
     return (
@@ -22,8 +23,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onProfileOver: () => dispatch({ type: actionTypes.PROFILE_MOUSE_OVER }),
-        onProfileOut: () => dispatch({ type: actionTypes.PROFILE_MOUSE_OUT })
+        onProfileOver: () => dispatch(profileMouseOver()),
+        onProfileOut: () => dispatch(profileMouseOut())
     }
 };
 
