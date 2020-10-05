@@ -1,7 +1,7 @@
 import React from 'react';
 import './MenuItem.css';
 import { connect } from 'react-redux';
-import * as actionTypes from '../../../../store/actions/actions';
+import { mainMenuMouseOver } from '../../../../store/actions/MainMenuActions';
 
 const menuItem = (props) => (
     <li className="MenuItem">
@@ -12,10 +12,7 @@ const menuItem = (props) => (
 // https://react-redux.js.org/api/connect#mergeprops-stateprops-dispatchprops-ownprops-object
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onMenuOver: () => dispatch({
-            type: actionTypes.MAIN_MENU_MOUSE_OVER,
-            link: ownProps.link
-        })
+        onMenuOver: () => dispatch(mainMenuMouseOver(ownProps.link))
     }
 }
 

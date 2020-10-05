@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Main.module.css';
 import ProfileMenu from '../Profile/ProfileMenu/ProfileMenu';
 import { connect } from 'react-redux';
-import * as actionTypes from '../../store/actions/actions';
+import { mainMenuMouseOut } from '../../store/actions/MainMenuActions';
 
 const main = (props) => {
     let profileMenuClasses = [classes.Profile__menu, classes.Profile__menuClosed];
@@ -58,7 +58,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onMenuOut: () => dispatch({ type: actionTypes.MAIN_MENU_MOUSE_OUT })
+        onMenuOut: () => dispatch(mainMenuMouseOut())
     }
 }
 
