@@ -1,10 +1,14 @@
 import React from 'react';
+import Weekly from './weekly/Weekly';
 
 const Dashboard = () => {
 
-    return(
+    return (
         <div>
             <h2>Dashboard</h2>
+            <div>
+                <Weekly />
+            </div>
         </div>
     );
 }

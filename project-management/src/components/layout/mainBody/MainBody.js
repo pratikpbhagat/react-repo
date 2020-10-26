@@ -7,12 +7,18 @@ import styles from './MainBody.module.css';
 import Accounts from '../../mainContent/accounts/Accounts';
 import Reports from '../../mainContent/reports/Reports';
 import Leaves from '../../mainContent/leaves/Leaves';
+import Notifications from '../../mainContent/notifications/Notifications';
+import Settings from '../../mainContent/settings/Settings';
+import Profile from '../../mainContent/profile/Profile';
 
 const MainBody = () => {
 
     return (
         <div className={styles.MainBody}>
             <Switch>
+                <Route path="/settings" component={Settings} />
+                <Route path="/my-account" component={Profile} />
+                <Route path="/notifications" component={Notifications} />
                 <Route path="/leaves" component={Leaves} />
                 <Route path="/reports">
                     <Reports />
