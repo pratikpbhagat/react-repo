@@ -1,0 +1,25 @@
+.SidebarMenuItems {
+    list-style: none;
+    color: #f0f3f7;
+}
+
+.SidebarMenuItems span {
+    padding-right: 15px;
+}
+
+.SidebarMenuItems li{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.SidebarMenuItems a{
+    color: #f0f3f7;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+}
+
+.SidebarMenuItems a:hover{
+    text-decoration: underline;
+}

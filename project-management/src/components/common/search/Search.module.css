@@ -1,0 +1,17 @@
+.Search {
+    align-items: center;
+    display: flex;
+    border:#A9A9A9;
+    border-width: thin;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.Search input {
+    border: 0px;
+    font-size: 16px;
+}
+
+.Search input:focus {
+    outline: none;
+}

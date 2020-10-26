@@ -1,0 +1,18 @@
+.Sidebar {
+    background-color: #282c34;
+    width: 15vw;
+    height: 100vh;
+}
+
+.SidebarMenuIcon {
+    padding-top: 10px;
+    margin-left: 12vw;
+    color: #f0f3f7;
+}
+
+@media (max-width: 200px) {
+
+    .Sidebar {
+        width: 10vw;
+    }
+}
