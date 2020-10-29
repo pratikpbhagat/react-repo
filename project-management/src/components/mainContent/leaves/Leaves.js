@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { updateObject } from '../../common/utility/Utility';
+import { getMultiSelectValues, updateObject } from '../../common/utility/Utility';
 import InputComponent from '../../ui/inputs/InputComponent';
 
 const Leaves = () => {
@@ -105,20 +105,7 @@ const Leaves = () => {
         let inputElementValue = event.target.value;
 
         if (inputIdentifier === 'interests') {
-            let selectedValues = leavesFormData[inputIdentifier];
-            if (selectedValues === '') {
-                selectedValues = [];
-            }
-            console.log(selectedValues.includes(inputElementValue));
-            if (selectedValues.includes(inputElementValue)) {
-                console.log('Remove ' + inputElementValue);
-                const updatedValues = selectedValues.filter(item => item !== inputElementValue);
-                inputElementValue = updatedValues;
-            } else {
-                selectedValues.push(inputElementValue);
-                inputElementValue = selectedValues;
-            }
-            console.log(inputElementValue);
+            inputElementValue = getMultiSelectValues(leavesFormData, inputIdentifier, inputElementValue);
         }
 
         const updatedFormData = updateObject(leavesFormData, {
