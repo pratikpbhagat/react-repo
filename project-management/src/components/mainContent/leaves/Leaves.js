@@ -7,7 +7,7 @@ const Leaves = () => {
     const [leavesFormData, setLeavesFormData] = useState({
         name: '',
         gender: '',
-        interests: '',
+        interests: [],
         address: '',
         type: ''
     });
