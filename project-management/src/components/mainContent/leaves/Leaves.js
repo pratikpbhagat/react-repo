@@ -24,13 +24,14 @@ const Leaves = () => {
                     { value: 'F', displayValue: 'Female' }
                 ],
                 label: 'Select Gender'
-            }
+            },
+            value: ''
         },
         interests: {
             elementType: 'multi-choice',
             elementConfig: {
                 type: 'checkbox',
-                name: 'gender',
+                name: 'interests',
                 options: [
                     { value: 'A', displayValue: 'First Interest' },
                     { value: 'B', displayValue: 'Second Interest' },
@@ -39,7 +40,8 @@ const Leaves = () => {
                     { value: 'E', displayValue: 'Fifth Interest' }
                 ],
                 label: 'Select Interests'
-            }
+            },
+            value: ''
         },
         address: {
             elementType: 'textarea',
@@ -58,7 +60,8 @@ const Leaves = () => {
                     { value: 'B', displayValue: 'Second Option' },
                     { value: 'C', displayValue: 'Third Option' }
                 ]
-            }
+            },
+            value: 'A'
         }
     });
 
@@ -76,14 +79,36 @@ const Leaves = () => {
         for (let formElementIdentifier in leavesForm) {
             formData[formElementIdentifier] = leavesForm[formElementIdentifier].value;
         }
-        console.log('Submit clicked - ' + formData.name);
+        console.log('Name - ' + formData.name);
+        console.log('gender - ' + formData.gender);
+        console.log('interests - ' + formData.interests);
+        console.log('address - ' + formData.address);
+        console.log('type - ' + formData.type);
     }
 
     const inputChangedHandler = (event, inputIdentifier) => {
-        const updatedFormElement = updateObject(leavesForm[inputIdentifier], {
-            value: event.target.value,
-        });
-        const updatedleavesForm = updateObject(leavesForm, {
+        console.log('inputChangedHandler - ' + inputIdentifier + ' ' + event.target.value);
+        let updatedleavesForm;
+        let updatedFormElement;
+        if (inputIdentifier === 'interests') {
+            let currFormValue = leavesForm[inputIdentifier].value;
+            let interestsValue;
+            if (currFormValue === '') {
+                interestsValue = [];
+            } else {
+                interestsValue = [currFormValue];
+            }
+            interestsValue.push(event.target.value);
+            console.log(interestsValue);
+            updatedFormElement = updateObject(leavesForm[inputIdentifier], {
+                value: interestsValue
+            });
+        } else {
+            updatedFormElement = updateObject(leavesForm[inputIdentifier], {
+                value: event.target.value
+            });
+        }
+        updatedleavesForm = updateObject(leavesForm, {
             [inputIdentifier]: updatedFormElement
         });
         setLeavesForm(updatedleavesForm);

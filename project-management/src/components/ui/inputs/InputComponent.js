@@ -7,20 +7,25 @@ const InputComponent = (props) => {
     switch (props.elementType) {
         case ('input'):
             inputComponent = <input {...props.elementConfig}
-                value={props.elementValue} onChange={props.changed}/>;
+                value={props.value}
+                onChange={props.changed} />;
             break;
         case ('textarea'):
-            inputComponent = <textarea {...props.elementConfig} value={props.elementValue} />;
+            inputComponent = <textarea {...props.elementConfig}
+                value={props.value}
+                onChange={props.changed} />;
             break;
         case ('multi-choice'):
             inputComponent = (
                 <Aux>
                     {
                         props.elementConfig.options.map(option => (
-                            <div key={option.value}>
-                                <input {...props.elementConfig} />
-                                <label>{option.displayValue}</label>
-                            </div>
+                            <label key={option.value}>
+                                <input {...props.elementConfig}
+                                    onChange={props.changed}
+                                    value={option.value} />
+                                {option.displayValue}
+                            </label>
                         ))
                     }
                 </Aux>
@@ -28,7 +33,7 @@ const InputComponent = (props) => {
             break;
         case ('select'):
             inputComponent = (
-                <select>
+                <select value={props.value} onChange={props.changed} >
                     {props.elementConfig.options.map(option => (
                         <option key={option.value} value={option.value}>
                             {option.displayValue}
