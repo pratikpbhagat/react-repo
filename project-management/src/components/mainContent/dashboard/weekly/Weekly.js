@@ -30,7 +30,7 @@ const Weekly = () => {
                 </div>
                 <div className={styles.WeeklyTableData}>
                     {daysOfWeek.map((data) => (
-                        <div>
+                        <div key={data.day}>
                             <div className={styles.WeeklyTableHeader}>{data.day}</div>
                             <div>{data.time}</div>
                             <div>{data.time}</div>
