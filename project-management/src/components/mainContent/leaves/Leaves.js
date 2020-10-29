@@ -4,6 +4,14 @@ import InputComponent from '../../ui/inputs/InputComponent';
 
 const Leaves = () => {
 
+    const [leavesFormData, setLeavesFormData] = useState({
+        name: '',
+        gender: '',
+        interests: '',
+        address: '',
+        type: ''
+    });
+
     const [leavesForm, setLeavesForm] = useState({
         name: {
             elementType: 'input',
@@ -79,39 +87,44 @@ const Leaves = () => {
         for (let formElementIdentifier in leavesForm) {
             formData[formElementIdentifier] = leavesForm[formElementIdentifier].value;
         }
-        console.log('Name - ' + formData.name);
-        console.log('gender - ' + formData.gender);
-        console.log('interests - ' + formData.interests);
-        console.log('address - ' + formData.address);
-        console.log('type - ' + formData.type);
+        console.log(leavesFormData);
     }
 
     const inputChangedHandler = (event, inputIdentifier) => {
-        console.log('inputChangedHandler - ' + inputIdentifier + ' ' + event.target.value);
-        let updatedleavesForm;
-        let updatedFormElement;
-        if (inputIdentifier === 'interests') {
-            let currFormValue = leavesForm[inputIdentifier].value;
-            let interestsValue;
-            if (currFormValue === '') {
-                interestsValue = [];
-            } else {
-                interestsValue = [currFormValue];
-            }
-            interestsValue.push(event.target.value);
-            console.log(interestsValue);
-            updatedFormElement = updateObject(leavesForm[inputIdentifier], {
-                value: interestsValue
-            });
-        } else {
-            updatedFormElement = updateObject(leavesForm[inputIdentifier], {
-                value: event.target.value
-            });
-        }
-        updatedleavesForm = updateObject(leavesForm, {
+        // handle input change events on screen
+        const updatedFormElement = updateObject(leavesForm[inputIdentifier], {
+            value: event.target.value
+        });
+
+        const updatedleavesForm = updateObject(leavesForm, {
             [inputIdentifier]: updatedFormElement
         });
         setLeavesForm(updatedleavesForm);
+
+        // handle actual form data
+        let inputElementValue = event.target.value;
+
+        if (inputIdentifier === 'interests') {
+            let selectedValues = leavesFormData[inputIdentifier];
+            if (selectedValues === '') {
+                selectedValues = [];
+            }
+            console.log(selectedValues.includes(inputElementValue));
+            if (selectedValues.includes(inputElementValue)) {
+                console.log('Remove ' + inputElementValue);
+                const updatedValues = selectedValues.filter(item => item !== inputElementValue);
+                inputElementValue = updatedValues;
+            } else {
+                selectedValues.push(inputElementValue);
+                inputElementValue = selectedValues;
+            }
+            console.log(inputElementValue);
+        }
+
+        const updatedFormData = updateObject(leavesFormData, {
+            [inputIdentifier]: inputElementValue
+        })
+        setLeavesFormData(updatedFormData);
     }
 
     let form = (
