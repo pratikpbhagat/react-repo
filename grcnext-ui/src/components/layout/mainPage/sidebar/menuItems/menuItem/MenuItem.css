@@ -1,0 +1,14 @@
+.menu-item-link ul{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.menu-item-link li {
+    display: flex;
+    text-align: left;
+}
+
+.menu-item-link li > img{
+    width: 50px;
+}

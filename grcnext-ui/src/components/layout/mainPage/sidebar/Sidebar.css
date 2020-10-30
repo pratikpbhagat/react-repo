@@ -18,7 +18,7 @@
     text-align: center;
 }
 
-.sidebar a {
+.sidebar a, a:visited, a:hover{
     font-size: 13px!important;
     display: flex;
     font-family: 'Roboto', sans-serif;
@@ -27,4 +27,10 @@
     font-size: 15px;
     opacity: 0.7;
     word-break: break-word;
+    color: #f0f3f7;
+}
+
+.sidebar-menu-items ul{
+    list-style: none;
+    display: block;
 }

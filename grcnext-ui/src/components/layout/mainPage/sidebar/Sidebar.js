@@ -2,6 +2,7 @@ import React from 'react';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faBars } from '@fortawesome/free-solid-svg-icons';
+import MenuItems from './menuItems/MenuItems';
 
 const Sidebar = () => {
 
@@ -34,6 +35,9 @@ const Sidebar = () => {
                         />
                     </li>
                 </ul>
+            </div>
+            <div className="sidebar-menu-items">
+                <MenuItems/>
             </div>
         </div>
     );
