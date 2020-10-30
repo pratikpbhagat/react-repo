@@ -1,5 +1,6 @@
 import React from 'react';
 import Aux from 'react-aux';
+import styles from './InputComponent.module.css';
 
 const InputComponent = (props) => {
     let inputComponent = null;
@@ -23,7 +24,7 @@ const InputComponent = (props) => {
                             <label key={option.value}>
                                 <input {...props.elementConfig}
                                     onChange={props.changed}
-                                    value={option.value} />
+                                    value={option.value} checked />
                                 {option.displayValue}
                             </label>
                         ))
@@ -46,7 +47,7 @@ const InputComponent = (props) => {
             inputComponent = <input />;
     }
     return (
-        <div>
+        <div className={styles.InputComponent}>
             <label>{props.elementConfig.label}</label>
             {inputComponent}
         </div>

@@ -1,0 +1,8 @@
+.InputComponent {
+    display: flex;
+    padding: 10px;
+}
+
+.InputComponent label{
+    padding-right: 60px;
+}
