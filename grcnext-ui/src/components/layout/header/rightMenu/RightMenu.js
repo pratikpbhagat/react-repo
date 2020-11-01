@@ -10,12 +10,12 @@ const RightMenu = () => {
             <ul>
                 <li>
                     <span>
-                        <FontAwesomeIcon icon={faSearch} title="Settings" />
+                        <FontAwesomeIcon icon={faSearch} title="Search" />
                     </span>
                 </li>
                 <li>
                     <span>
-                        <FontAwesomeIcon icon={faHome } title="Home" />
+                        <FontAwesomeIcon icon={faHome} title="Home" />
                     </span>
                 </li>
                 <li>
@@ -27,6 +27,14 @@ const RightMenu = () => {
                     <span>
                         <FontAwesomeIcon icon={faUser} title="User" />
                     </span>
+                    <div className="user-menu">
+                        <ul>
+                            <li>Lorem Ipsum</li>
+                            <li>Account Setting</li>
+                            <li>Take a tour</li>
+                            <li>Logout</li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
         </div>
