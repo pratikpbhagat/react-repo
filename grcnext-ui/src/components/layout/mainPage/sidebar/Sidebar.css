@@ -1,6 +1,5 @@
 .sidebar {
     height: 100vh;
-    width: 15vw;
     overflow-x: hidden;
     padding: 0px 16px 0px 16px;
     box-shadow: 0 1px 9px 1px #00000036;
@@ -8,6 +7,14 @@
     background: linear-gradient(-30deg,#295bb5,#0d3868) !important;
     background: linear-gradient(#0997e0 ,#2059a7) !important;
     color: #f0f3f7;
+}
+
+.fullSidebar {
+    width: 15vw;
+}
+
+.collapsed-sidebar {
+    width: 8vw;
 }
 
 .sidebar ul {
@@ -33,4 +40,13 @@
 .sidebar-menu-items ul{
     list-style: none;
     display: block;
+}
+
+.show-element {
+    display: block;
+}
+
+.hide-element {
+    /* display: none; */
+    opacity: 0;
 }

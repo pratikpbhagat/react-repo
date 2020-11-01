@@ -1,32 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faBars } from '@fortawesome/free-solid-svg-icons';
 import MenuItems from './menuItems/MenuItems';
 
 const Sidebar = () => {
 
-    function menuClick() {
-        alert('Menu Clicked');
+    let showClasses = 'show-element';
+
+    let hideClasses = 'hide-element';
+
+    let sidebarClass = ['sidebar', 'fullSidebar'];
+
+    const [showMenu, setShowMenu] = useState(true);
+
+    const [showBack, setShowBack] = useState(false);
+
+    const [sidebarClasses, setSidebarClasses] = useState(sidebarClass.join(' '));
+
+    const menuClick = () => {
+        setShowMenu(false);
+        setShowBack(true);
+        sidebarClass = ['sidebar', 'collapsed-sidebar'];
+        setSidebarClasses(sidebarClass.join(' '));
     }
 
     function backClicked() {
-        alert('Back Clicked');
+        setShowMenu(true);
+        setShowBack(false);
+        sidebarClass = ['sidebar', 'fullSidebar'];
+        setSidebarClasses(sidebarClass.join(' '));
     }
 
     return (
-        <div className="sidebar">
+        <div className={sidebarClasses}>
             <div>
                 <ul>
-                    <li>
+                    <li className={showBack ? showClasses : hideClasses}>
                         <FontAwesomeIcon
                             id="backIcon"
-                            icon={faArrowLeft}
+                            icon={faArrowRight}
                             title="Back"
                             onClick={backClicked}
                         />
                     </li>
-                    <li>
+                    <li className={showMenu ? showClasses : hideClasses}>
                         <FontAwesomeIcon
                             id="menuIcon"
                             icon={faBars}
@@ -37,7 +55,7 @@ const Sidebar = () => {
                 </ul>
             </div>
             <div className="sidebar-menu-items">
-                <MenuItems/>
+                <MenuItems menuClicked={showMenu} />
             </div>
         </div>
     );
