@@ -34,7 +34,7 @@ const Sidebar = () => {
 
     return (
         <div className={sidebarClasses}>
-            <div>
+            <div className="bars-arrow">
                 <ul>
                     <li className={showBack ? showClasses : hideClasses}>
                         <FontAwesomeIcon

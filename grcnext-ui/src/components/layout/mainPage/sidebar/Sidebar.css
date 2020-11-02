@@ -50,3 +50,7 @@
     /* display: none; */
     opacity: 0;
 }
+
+.bars-arrow {
+    display: none;
+}

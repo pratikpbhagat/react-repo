@@ -1,5 +1,5 @@
 .right-menu {
-    padding-right: 30px;
+    padding: 0px 30px 0px 0px;
     color: lightblue;
     font-size: 18px!important;
 }
@@ -11,10 +11,12 @@
 
 .right-menu li{
     padding-right: 20px;
+    cursor: pointer;
 }
 
 .user-menu {
-    padding-top: 10px;
+    /* padding-top: 10px; */
+    margin-top: 10px;
 }
 
 .user-menu ul {
@@ -23,7 +25,6 @@
     position: absolute;
     background-color: #fff;
     color: #30c7ed;
-    /* border-bottom: 0.5px solid gray; */
     border: 0.1px solid #cccccc;
 	z-index:999;
     text-decoration:none;
@@ -32,6 +33,26 @@
     padding: 10px 10px 0px 10px;
     align-items: center;
     text-align: center;
+    box-shadow: 0 1px 9px 1px #00000036;
+}
+
+.user-menu ul:before, .user-menu ul:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+}
+.user-menu ul:before {
+    left: 80px;
+    border: 11px solid transparent;
+    border-bottom-color: #ddd;
+}
+.user-menu ul:after {
+    left: 81px;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
 }
 
 .user-menu li {
@@ -41,13 +62,14 @@
     padding: 5px;
 }
 
-.user-menu:before {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-width: 10px 12px;
-    border-color: transparent transparent red transparent;
-    left: 15%;
-    /* TOP IS DOUBLE THE HEIGHT OF THE BORDER */
-    top: -20px;
+.user-menu li:last-child {
+    border-bottom: none
+}
+
+.user-menu-show {
+    opacity: 100;
+}
+
+.user-menu-hide {
+    opacity: 0;
 }
