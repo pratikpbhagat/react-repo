@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faHome, faBell, faUser } from '@fortawesome/free-solid-svg-icons';
 import './RightMenu.css';
+import ProfileMenu from './profileMenu/ProfileMenu';
 
 const RightMenu = () => {
 
@@ -39,18 +40,11 @@ const RightMenu = () => {
                         <FontAwesomeIcon icon={faBell} title="Notifications" />
                     </span>
                 </li>
-                <li onMouseEnter={userMenuOpen} onMouseLeave={userMenuOpen}>
-                    <span>
+                <li onMouseLeave={userMenuOpen}>
+                    <span onMouseOver={userMenuOpen}>
                         <FontAwesomeIcon icon={faUser} title="User" />
                     </span>
-                    <div className={showUserMenu}>
-                        <ul>
-                            <li>Lorem Ipsum</li>
-                            <li>Account Setting</li>
-                            <li>Take a tour</li>
-                            <li>Logout</li>
-                        </ul>
-                    </div>
+                    <ProfileMenu className={showUserMenu} />
                 </li>
             </ul>
         </div>

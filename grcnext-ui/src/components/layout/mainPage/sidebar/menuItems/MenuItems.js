@@ -4,7 +4,7 @@ import MenuItem from "./menuItem/MenuItem";
 const MenuItems = (props) => {
 
     let menuItems = [
-        { link: '/create', imgSrc: '', label: 'Risk and Control Self Assessment' },
+        { link: '/create', imgSrc: 'BCM', label: 'Risk and Control Self Assessment' },
         { link: '/risk-key', imgSrc: '', label: 'Risk Key Indicators' },
         { link: '/loss-data', imgSrc: '', label: 'Loss Data Management' },
         { link: '/todo', imgSrc: '', label: 'Operational Capital Charge' },
@@ -19,6 +19,7 @@ const MenuItems = (props) => {
                         key={menu.link}
                         link={menu.link}
                         label={menu.label}
+                        imgSrc={menu.imgSrc}
                         menuClicked={props.menuClicked} />
                 ))}
             </ul>

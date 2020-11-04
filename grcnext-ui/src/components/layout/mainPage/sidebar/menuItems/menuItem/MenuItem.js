@@ -9,8 +9,7 @@ const MenuItem = (props) => {
 
     let hideClasses = 'hide-item';
 
-    console.log(props.menuClicked);
-
+    let imgPath = '../../../../../../images/menuitems/' + props.imgSrc + '.svg';
     return (
         <Link to={props.link} className="menu-item-link">
             <ul>

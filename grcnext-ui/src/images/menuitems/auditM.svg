@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67" height="53" viewBox="0 0 67 53">
+  <defs>
+    <clipPath id="clip-Audit_">
+      <rect width="67" height="53"/>
+    </clipPath>
+  </defs>
+  <g id="Audit_" data-name="Audit " clip-path="url(#clip-Audit_)">
+    <g id="Group_754" data-name="Group 754" transform="translate(-30.953 -503.967)">
+      <path id="Path_86" data-name="Path 86" d="M104,255.664v1.091h1.069v-1.091c-.176.015-.354.022-.534.022S104.176,255.679,104,255.664Z" transform="translate(-54.581 271.242)" fill="#fff"/>
+      <path id="Path_88" data-name="Path 88" d="M96,456.534a1.069,1.069,0,1,0,2.137,0V456H96Z" transform="translate(-47.115 84.287)" fill="#fff"/>
+      <g id="Group_752" data-name="Group 752">
+        <rect id="Rectangle_16850" data-name="Rectangle 16850" width="2.392" height="8.074" transform="translate(48.84 531.126)" fill="#fff"/>
+        <g id="Group_751" data-name="Group 751">
+          <path id="Path_87" data-name="Path 87" d="M125.878,40.55a6.386,6.386,0,0,1-1.637,4.275h5.469a4.156,4.156,0,0,1,2.958,1.225,3.094,3.094,0,0,0,2.2.912h4.367V37.695a1.593,1.593,0,0,0-.47-1.134l-3.805-3.805V35.74a.535.535,0,0,0,.534.534h1.6v1.069h-1.6a1.6,1.6,0,0,1-1.6-1.6v-3.7a1.615,1.615,0,0,0-.351-.039H121.6a1.6,1.6,0,0,0-1.6,1.6v.557A6.421,6.421,0,0,1,125.878,40.55Zm.534-2.672V36.809h5.344v1.069Zm2.137,1.6V40.55h-1.069V39.481Zm5.344,3.74h-6.412V42.153h6.412Zm3.74,0h-2.672V42.153h2.672Zm-4.275-3.74h4.275V40.55h-4.275ZM132.29,40.55h-2.672V39.481h2.672Zm-4.809-6.412h4.275v1.069h-4.275Zm-3.206,0h2.137v1.069h-2.137Z" transform="translate(-69.512 479.967)" fill="#fff"/>
+          <ellipse id="Ellipse_63" data-name="Ellipse 63" cx="5.233" cy="5.233" rx="5.233" ry="5.233" transform="translate(44.953 515.278)" fill="#fff"/>
+          <path id="Path_89" data-name="Path 89" d="M157.374,242.137H149.8a4.156,4.156,0,0,1-2.958-1.225,3.094,3.094,0,0,0-2.2-.912h-6.7a6.383,6.383,0,0,1-1.937.866v1.272a.534.534,0,0,1,.534.534v12.29h20.84a1.6,1.6,0,0,0,1.6-1.6V243.74A1.6,1.6,0,0,0,157.374,242.137Z" transform="translate(-84.444 285.86)" fill="#fff"/>
+        </g>
+        <path id="Path_90" data-name="Path 90" d="M426.137,160H424v6.412h2.137a2.658,2.658,0,0,1,1.6.536V161.6A1.6,1.6,0,0,0,426.137,160Z" transform="translate(-353.207 360.516)" fill="#fff"/>
+      </g>
+      <rect id="Rectangle_16851" data-name="Rectangle 16851" width="2.392" height="1.794" transform="translate(48.84 528.734)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
