@@ -1,0 +1,8 @@
+.multi-step-form ul {
+    list-style: none;
+    display: flex;
+}
+
+.multi-step-form ul li {
+    padding: 5px;
+}
