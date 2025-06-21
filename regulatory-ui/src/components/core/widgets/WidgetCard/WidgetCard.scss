@@ -1,0 +1,50 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+.widget-card {
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  min-width: 200px;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .card-header {
+    @include spaceBetween;
+
+    .icon {
+      width: $widget-icon-size;
+      height: $widget-icon-size;
+    }
+
+    .card-actions img {
+      width: $widget-action-icon-size;
+      height: $widget-action-icon-size;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .card-body {
+    .card-title {
+      font-size: $font-size-sm;
+      color: $widget-title-color;
+      margin-bottom: 8px;
+    }
+
+    .count {
+      font-size: 60px;
+      font-weight: bold;
+      color: #16AB03;
+    }
+
+    .subtext {
+      font-size: 13px;
+      color: #616161;
+      margin-top: 8px;
+    }
+  }
+}

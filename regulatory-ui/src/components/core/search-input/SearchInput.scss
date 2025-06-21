@@ -1,0 +1,51 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  .search-box {
+    padding: $spacing-sm $spacing-md;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 95%;
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(90deg, #3595F0, #B175E1) border-box;
+    border: 1px solid transparent;
+    outline: none;
+  }
+
+  .suggestion-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+
+    .suggestion-label {
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semi-bold;
+      color: #9E9E9E;
+      white-space: nowrap;
+    }
+
+    .suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $spacing-xs;
+
+      button {
+        background: white;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-size: $font-size-sm;
+        cursor: pointer;
+        background: linear-gradient(white, white) padding-box,
+        linear-gradient(90deg, #3595F0, #B175E1) border-box;
+        border: 1px solid transparent;
+      }
+    }
+  }
+}
