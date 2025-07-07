@@ -1,0 +1,23 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.sub-header {
+  display: flex;
+  flex-direction: column;
+
+  .row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .highlight {
+    font-size: $font-size-lg;
+    font-weight: bolder;
+    background: linear-gradient(to right, #3595F0, #B175);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 3rem;
+  }
+}

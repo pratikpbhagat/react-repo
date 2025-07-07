@@ -1,0 +1,13 @@
+<svg width="213" height="65" viewBox="0 0 213 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Dynamic circular ring -->
+    <circle cx="32.5" cy="32.5" r="30" stroke="#FFFFFF" stroke-width="3" fill="none" />
+    <path d="M15 33a17.5 17.5 0 1 1 35 0" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Abstract runner -->
+    <path d="M30 28c1.2-2 3.6-2 5-1l1.5 1.5c1 1 0 2-1 2l-1.5.5 2.5 2c1 1 1 2 0 2s-1.8 0-2.8-1l-1.5-1-1 4c0 1-.8 2-1.8 2s-2-1-1.8-2l1.5-5-2-.8c-1 0-.8-1.8.2-2l2.5-.2Z" fill="#FFFFFF"/>
+
+    <!-- Brand name -->
+    <text x="72" y="43" fill="#FFFFFF" font-family="'Segoe UI', 'Arial', sans-serif" font-size="28" font-weight="600" letter-spacing="0.5">
+        SportSync
+    </text>
+</svg>

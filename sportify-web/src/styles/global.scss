@@ -1,0 +1,23 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+html * {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: $site-background;
+  overflow-y: hidden;
+}

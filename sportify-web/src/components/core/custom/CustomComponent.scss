@@ -1,0 +1,32 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.welcome-header {
+  display: flex;
+  flex-direction: column;
+
+  .top-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .greeting {
+    flex: 1 1 250px;
+
+    h2 {
+      margin: 0;
+      font-weight: $font-weight-semi-bold;
+      color: $dashboard-header-color;
+    }
+
+    .highlight {
+      font-size: $font-size-lg;
+      font-weight: bolder;
+      background: linear-gradient(to right, #3595F0, #B175);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

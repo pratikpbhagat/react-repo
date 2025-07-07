@@ -1,0 +1,40 @@
+@use "variables" as *;
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexEnd {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin spaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin sidebarLinkHover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-top-left-radius: $border-radius-large;
+  border-bottom-left-radius: $border-radius-large;
+  margin-left: $spacing-xs;
+  color: $white;
+}
+
+@mixin sidebarLinkActive {
+  background-color: $sidebar-active-bg;
+  color: $primary;
+  font-weight: $font-weight-bold;
+  border-top-left-radius: $border-radius-large;
+  border-bottom-left-radius: $border-radius-large;
+  margin-left: $spacing-xs;
+}
+
+@mixin boxShadowMedium {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}

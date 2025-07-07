@@ -1,0 +1,24 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.dashboard-header {
+  display: flex;
+  flex-direction: column;
+
+  .row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .greeting {
+    flex: 1 1 250px;
+
+    h2 {
+      margin: 0;
+      font-weight: $font-weight-semi-bold;
+      color: $dashboard-header-color;
+    }
+  }
+}

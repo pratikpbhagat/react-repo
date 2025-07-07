@@ -1,0 +1,26 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.sidebar {
+  width: $sidebar-width;
+  background-color: $primary;
+  color: $white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: $z-index-sidebar;
+  padding-top: $spacing-sm;
+
+  .header {
+    padding-bottom: $spacing-lg;
+
+    .logo-header {
+      @include flexCenter;
+
+      img {
+        height: auto;
+      }
+    }
+  }
+}
